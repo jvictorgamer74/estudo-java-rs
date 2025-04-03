@@ -3,10 +3,13 @@ package banco;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
+/**
+ * TODO
+ * 7) (FAZER COMIGO) GUARDAR AS TRANSÇÕES NA MEMÓRIA
+ * 8) Refactory (melhorar/otimizar) para separa a lógica dos dados
+ */
 public class ContaCorrente {
 
     // Atributos
@@ -28,22 +31,9 @@ public class ContaCorrente {
         this.saldoDaConta = saldoDaConta;
     }
 
-    /**
-     * feita 1) Transformar os atributos de classe para privado
-     * feita 2) Criar métodos get e set para os atributos
-     * feito 3) Definir um scanner em cada método
-     * feito 4) Excluir o scanner definido na classe
-     * feito 5) Criar um construtor recebendo os atributos definidos na classe e inicializando os atributos
-     * feito 6) Colocar um \n em no início do System.out.println("..
-     *
-     * TODO
-     * 7) (FAZER COMIGO) GUARDAR AS TRANSÇÕES NA MEMÓRIA
-     * 8) Refactory (melhorar/otimizar) para separa a lógica dos dados
-     */
+
     // Lista de transações
     //private List<String> transacoes = new ArrayList<>();
-
-
 
     public String getNome() {
         return nome;
@@ -85,7 +75,7 @@ public class ContaCorrente {
         this.dataDeNascimento = dataDeNascimento;
     }
 
-    // Método para cancelar conta
+
     public void cancelarConta() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insira o motivo do cancelamento:");
@@ -93,12 +83,12 @@ public class ContaCorrente {
         System.out.println("O motivo do cancelamento é: " + motivoCancelamento);
     }
 
-    // Método para consultar saldo
+
     public void consultarSaldoFinal () {
         System.out.println("\n O seu saldo é de " + saldoDaConta);
     }
 
-    // Método para sacar valor
+
     public void sacarUmValor () {
         System.out.println("\n Quanto deseja sacar?");
         Scanner scanner = new Scanner(System.in);
@@ -113,7 +103,7 @@ public class ContaCorrente {
         }
     }
 
-    // Método para transferir valor
+
     public void transferirUmValor () {
         LocalDateTime horaAtual = LocalDateTime.now();
         Scanner scanner = new Scanner(System.in);
@@ -126,15 +116,16 @@ public class ContaCorrente {
 
         if (valorDaTransferencia <= saldoDaConta) {
             saldoDaConta -= valorDaTransferencia;
-            String transacao = "Transferência de " + valorDaTransferencia + " para " + nomeDestinatario + " realizada em " + horaAtual;
+            String transacao = "Transferência de " + valorDaTransferencia + " para "
+                    + nomeDestinatario + " realizada em " + horaAtual;
             //transacoes.add(transacao);
-            System.out.println("A transferência de " + valorDaTransferencia + " para " + nomeDestinatario + " foi realizada com sucesso em " + horaAtual);
+            System.out.println("A transferência de " + valorDaTransferencia + " para " + nomeDestinatario
+                    + " foi realizada com sucesso em " + horaAtual);
         } else {
             System.out.println("Saldo insuficiente para transferência.");
         }
     }
 
-    // Método para consultar transações do dia
     public void consultarAsTransacoesDoDia () {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n Insira a data no formato DD/MM/AAAA: ");
@@ -168,7 +159,8 @@ public class ContaCorrente {
 
     // Método para introdução ao usuário
     public void introducaoAoUsuario () {
-        System.out.println("\n Olá " + nome + " , o seu saldo é de " + saldoDaConta + " , seu número de agência e conta são respectivamente " + numeroDaAgencia + " , " + numeroDaConta);
+        System.out.println("\n Olá " + nome + " , o seu saldo é de " + saldoDaConta
+                + " , seu número de agência e conta são respectivamente " + numeroDaAgencia + " , " + numeroDaConta);
     }
 }
 
