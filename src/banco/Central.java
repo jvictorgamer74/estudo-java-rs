@@ -14,6 +14,8 @@ public class Central {
          * */
 
         central.realizarOperacoesContaCorrente1();
+
+//        central.realizarOperacoesContaCorrente2();
     }
 
     public void realizarOperacoesContaCorrente1() {
@@ -31,14 +33,6 @@ public class Central {
         contaCorrente.consultarAsTransacoesDoDia();
         contaCorrente.cancelarConta();
 
-//        ContaCorrente contaCorrente2 = new ContaCorrente();
-//        contaCorrente2.setNome("Maria");
-//        contaCorrente2.setSaldoDaConta(3500.6);
-//        contaCorrente2.setNumeroDaAgencia(8834);
-//        contaCorrente2.setNumeroDaConta(10055);
-//        contaCorrente2.setDataDeNascimento(LocalDate.of(1970, 12, 12));
-
-
     }
 
     public void realizarOperacoesContaCorrente2() {
@@ -53,21 +47,6 @@ public class Central {
         contaCorrente.cancelarConta();
     }
 
-   /* public void yyyy() {
-        //botar a primeira solução
-        //Chamando construtor com todos os parâmetros
-        ContaCorrente contaCorrente1 = new ContaCorrente("Jonh", , , );
-    }
 
-    public void zzz() {
-        // chamar construtor padrão e chamar métodos setXX para inicializar a classe com os valores definidos
-        ContaCorrente contaCorrente = new ContaCorrente();
-        contaCorrente.setNome("");
-        //fazer o mesmo pros demais atribuots
-
-        //e colocar as demais chamadas do contaCorrente
-    }
-
-*/
-    }
+}
 
