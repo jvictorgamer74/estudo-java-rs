@@ -1,4 +1,7 @@
 package banco;
+import banco.domain.ContaCorrente;
+import banco.service.ContaService;
+
 import java.time.LocalDate;
 
 public class Central {
@@ -26,25 +29,30 @@ public class Central {
         contaCorrente.setNumeroDaConta(55055);
         contaCorrente.setDataDeNascimento(LocalDate.of(2006, 12, 12));
 
-        contaCorrente.introducaoAoUsuario();
-        contaCorrente.sacarUmValor();
-        contaCorrente.transferirUmValor();
-        contaCorrente.consultarSaldoFinal();
-        contaCorrente.consultarAsTransacoesDoDia();
-        contaCorrente.cancelarConta();
+        //Instanciei o conta service pq ele eh responsavel por realizar operações dentro da classe conta corrente
+        ContaService contaService = new ContaService();
+
+        //Alguns métodos da classe conta service recebem como parâmetro de entrada a classe conta corrente
+        contaService.introducaoAoUsuario(contaCorrente);
+        contaService.sacarUmValor(contaCorrente);
+        contaService.transferirUmValor(contaCorrente);
+        contaService.consultarSaldoFinal(contaCorrente);
+        contaService.consultarAsTransacoesDoDia();
+        contaService.cancelarConta();
 
     }
 
     public void realizarOperacoesContaCorrente2() {
+        ContaService contaService = new ContaService();
         LocalDate dataDeNascimento = LocalDate.of(2006, 12, 12);
         ContaCorrente contaCorrente = new ContaCorrente("João", 55055, 2234, dataDeNascimento, 6500.6);
 
-        contaCorrente.introducaoAoUsuario();
-        contaCorrente.sacarUmValor();
-        contaCorrente.transferirUmValor();
-        contaCorrente.consultarSaldoFinal();
-        contaCorrente.consultarAsTransacoesDoDia();
-        contaCorrente.cancelarConta();
+        contaService.introducaoAoUsuario(contaCorrente);
+        contaService.sacarUmValor(contaCorrente);
+        contaService.transferirUmValor(contaCorrente);
+        contaService.consultarSaldoFinal(contaCorrente);
+        contaService.consultarAsTransacoesDoDia();
+        contaService.cancelarConta();
     }
 
 
