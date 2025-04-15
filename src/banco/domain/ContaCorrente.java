@@ -17,31 +17,29 @@ import java.util.Scanner;
 public class ContaCorrente {
 
     // Atributos
+
     private String nome;
     private Integer numeroDaConta;
     private Integer numeroDaAgencia;
     private LocalDate dataDeNascimento;
     private Double saldoDaConta;
+    private LocalDate dataDoSaque;
 
     public ContaCorrente() {
         super();
     }
 
-    public ContaCorrente(String nome, Integer numeroDaConta, Integer numeroDaAgencia, LocalDate dataDeNascimento, Double saldoDaConta) {
+    public ContaCorrente(String nome, Integer numeroDaConta, Integer numeroDaAgencia, LocalDate dataDeNascimento, Double saldoDaConta , LocalDate dataDoSaque) {
         this.nome = nome;
         this.numeroDaConta = numeroDaConta;
         this.numeroDaAgencia = numeroDaAgencia;
         this.dataDeNascimento = dataDeNascimento;
         this.saldoDaConta = saldoDaConta;
+        this.dataDoSaque = dataDoSaque;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public String getNome() { return nome;}
+    public void setNome(String nome) {this.nome = nome;}
 
     public Integer getNumeroDaConta() {
         return numeroDaConta;
@@ -74,6 +72,8 @@ public class ContaCorrente {
     public void setDataDeNascimento(LocalDate dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
+
+
 
 
 
