@@ -17,7 +17,6 @@ import java.util.Scanner;
 public class ContaCorrente {
 
     // Atributos
-
     private String nome;
     private Integer numeroDaConta;
     private Integer numeroDaAgencia;
@@ -29,7 +28,7 @@ public class ContaCorrente {
         super();
     }
 
-    public ContaCorrente(String nome, Integer numeroDaConta, Integer numeroDaAgencia, LocalDate dataDeNascimento, Double saldoDaConta , LocalDate dataDoSaque) {
+    public ContaCorrente(String nome, Integer numeroDaConta, Integer numeroDaAgencia, LocalDate dataDeNascimento, Double saldoDaConta) {
         this.nome = nome;
         this.numeroDaConta = numeroDaConta;
         this.numeroDaAgencia = numeroDaAgencia;
@@ -38,8 +37,13 @@ public class ContaCorrente {
         this.dataDoSaque = dataDoSaque;
     }
 
-    public String getNome() { return nome;}
-    public void setNome(String nome) {this.nome = nome;}
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public Integer getNumeroDaConta() {
         return numeroDaConta;
@@ -57,14 +61,6 @@ public class ContaCorrente {
         this.numeroDaAgencia = numeroDaAgencia;
     }
 
-    public Double getSaldoDaConta() {
-        return saldoDaConta;
-    }
-
-    public void setSaldoDaConta(Double saldoDaConta) {
-        this.saldoDaConta = saldoDaConta;
-    }
-
     public LocalDate getDataDeNascimento() {
         return dataDeNascimento;
     }
@@ -73,10 +69,21 @@ public class ContaCorrente {
         this.dataDeNascimento = dataDeNascimento;
     }
 
+    public Double getSaldoDaConta() {
+        return saldoDaConta;
+    }
 
+    public void setSaldoDaConta(Double saldoDaConta) {
+        this.saldoDaConta = saldoDaConta;
+    }
 
+    public LocalDate getDataDoSaque() {
+        return dataDoSaque;
+    }
 
-
+    public void setDataDoSaque(LocalDate dataDoSaque) {
+        this.dataDoSaque = dataDoSaque;
+    }
 }
 
 

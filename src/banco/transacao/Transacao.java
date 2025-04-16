@@ -7,20 +7,7 @@ public class Transacao {
     private String msg;
     private Double valorSolicitado;
     private LocalDate dataOperacao;
-    private LocalDate dataDaTransf;
-
-    public Transacao (String msg, LocalDate dataOperacao, Double valorSolicitado) {
-        this.msg = msg;
-        this.dataOperacao = dataOperacao;
-        this.valorSolicitado = valorSolicitado;
-    }
-
-    public Transacao() {
-
-    }
-
-    public Transacao(String sacador, LocalDate dataDoSaque, double valorDoSaque, Object o) {
-    }
+    private String solicitante;
 
     public String getMsg() {
         return msg;
@@ -29,13 +16,15 @@ public class Transacao {
     public void setMsg(String msg) {
         this.msg = msg;
     }
-    public double getValorSolicitado() {
+
+    public Double getValorSolicitado() {
         return valorSolicitado;
     }
 
     public void setValorSolicitado(Double valorSolicitado) {
         this.valorSolicitado = valorSolicitado;
     }
+
     public LocalDate getDataOperacao() {
         return dataOperacao;
     }
@@ -44,8 +33,11 @@ public class Transacao {
         this.dataOperacao = dataOperacao;
     }
 
+    public String getSolicitante() {
+        return solicitante;
+    }
 
-    //criar construtor padrão e construtor com todos atributos
-    //criar get e set
-
+    public void setSolicitante(String solicitante) {
+        this.solicitante = solicitante;
+    }
 }
