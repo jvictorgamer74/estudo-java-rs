@@ -7,7 +7,7 @@
 
 ---
 
-##Table of Contents
+## Table of Contents
 1.[About the project](#about-the-project)
 2.[Key Features](key-features)
 3.[New Concepts](#new-concepts)
@@ -17,13 +17,13 @@
 
 ---
 
-##✨ About the project
+## ✨ About the project
 
 **Bank Account Currency** is a little project of bank account currency just to review java fundaments and see how looks the OOP in real usage. I have done most part of the code by myself but my dad helped me so much doing refactoring ,indenting and teaching some functions that I don't learned very well in module java fundaments in the course.
 
 ---
 
-##👨🏾‍💻 Key Features
+## 👨🏾‍💻 Key Features
 
 -(introducaoAoUsuario) to introduce the user to initial data(name,agency number and account number) 
 
@@ -40,7 +40,7 @@
 
 ---
 
-##🌎 New Concepts 
+## 🌎 New Concepts 
 
 -I learned more about the fundamentals of OOP, such as polymorphism, which allows methods with the same signature to behave differently depending on the child class. Each child class can override the method and provide its own specific behavior.
 
@@ -54,7 +54,7 @@ Inheritance allows a class to inherit common attributes and methods from a paren
 
 ---
 
-##🔥 Usage
+## 🔥 Usage
 
 -The user will be introduced by entering initial data such as their name, agency number, and account number. Then, the user will be asked how much they want to withdraw ("sacar"). After entering the amount, another question will be asked: who the user wants to transfer ("transferir") money to, followed by the value of the transaction.
 
@@ -63,7 +63,7 @@ To conclude, the user will be informed of their current account balance, and fin
 
 ---
 
-##⚙️ Project Structure
+## ⚙️ Project Structure
 - The Bank file contains the domain class, which includes the ContaCorrente class — an entity that holds data, characteristics, and methods that are predefined in the system.
 
 The other files are:
@@ -75,11 +75,11 @@ Transacao, which contains the Central class. Its function is to instantiate obje
 
 ---
 
-##👤 Authors and Acknowledgments
+## 👤 Authors and Acknowledgments
 - My Dad and Me
 
 ---
 
-##📝 License
+## 📝 License
 -Copyright © 2025 João Victor Braga Santos.
 This project is MIT licensed.
