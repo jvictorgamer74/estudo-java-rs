@@ -1,13 +1,6 @@
 package banco.domain;
 
-import banco.transacao.Transacao;
-
-import java.time.LocalDateTime;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 /**
  * TODO
@@ -57,14 +50,6 @@ public class ContaCorrente {
         this.numeroDaAgencia = numeroDaAgencia;
     }
 
-    public Double getSaldoDaConta() {
-        return saldoDaConta;
-    }
-
-    public void setSaldoDaConta(Double saldoDaConta) {
-        this.saldoDaConta = saldoDaConta;
-    }
-
     public LocalDate getDataDeNascimento() {
         return dataDeNascimento;
     }
@@ -73,10 +58,21 @@ public class ContaCorrente {
         this.dataDeNascimento = dataDeNascimento;
     }
 
+    public Double getSaldoDaConta() {
+        return saldoDaConta;
+    }
 
+    public void setSaldoDaConta(Double saldoDaConta) {
+        this.saldoDaConta = saldoDaConta;
+    }
 
+    public LocalDate getDataDoSaque() {
+        return dataDoSaque;
+    }
 
-
+    public void setDataDoSaque(LocalDate dataDoSaque) {
+        this.dataDoSaque = dataDoSaque;
+    }
 }
 
 
